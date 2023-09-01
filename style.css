@@ -8,7 +8,7 @@ html {
 body * {
     font-family: "Noto Sans JP", sans-serif;
     box-sizing: border-box;
-    text-decoration: none;
+    
     font-size: 1.6rem;
     margin: 0;
 }
@@ -98,6 +98,7 @@ ul{
 }
 
 table{
+    width: 100%;
     border-spacing: 1px;
     border-collapse: collapse;
 }
@@ -129,6 +130,11 @@ table{
 }
 
 #shaved_ice{
+    margin: 0 auto;
+    width: 10rem;
+}
+
+#beer{
     margin: 0 auto;
     width: 10rem;
 }
