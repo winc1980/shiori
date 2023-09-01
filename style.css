@@ -1,0 +1,211 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+a{
+  color: #0078d7;  
+}
+
+img{
+    display: block;
+}
+
+#fv{
+    height: 50rem;
+    background-image: url(images/fv.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container{
+    max-width: 43rem;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+    background-image: url(images/bg.webp);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.contents_wrapper{
+    background-color: white;
+    margin: 4rem 1rem 0 1rem;
+    padding: 2rem 1rem;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+h1{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    padding-top:11rem;
+    color: #f3f3f3;
+    font-weight: 100;
+}
+
+h2{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-weight: 100;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+ol{
+    padding-inline-start: 3rem;
+}
+
+ul{
+    display: block;
+    padding-inline-start: 3rem;
+}
+
+table{
+    border-spacing: 1px;
+    border-collapse: collapse;
+}
+
+#place img{
+    margin: 2rem 0;
+}
+
+.object li{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    font-weight: 100;
+}
+
+.illust .contents_wrapper{
+    background-color: transparent;
+    margin: 8rem 0;
+}
+
+#watermelon{
+    margin: 0 auto;
+    width: 12rem;
+}
+
+#windbell{
+    margin: 0 auto;
+    width: 10rem;
+}
+
+#shaved_ice{
+    margin: 0 auto;
+    width: 10rem;
+}
+
+.role_image{
+    width: 10rem;
+    object-fit: contain;
+}
+
+.flex_wrapper{
+    display: flex;
+    margin: 3rem 0;
+}
+
+/* ページトップリンクの記述 https://coco-factory.jp/ugokuweb/move01/8-1-2/ */
+
+/*リンクの形状*/
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:#2b2b2b;
+	border-radius: 28px;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:1.2rem;
+	transition:all 0.3s;
+    margin: 0  0.5rem 0 0;
+}
+
+#page-top a:hover{
+	background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
